@@ -38,3 +38,9 @@ addons:
 matrix:
   allow_failures:
     - go: 'tip'
+
+deploy:
+  provider: script
+  script: scripts/build-soda-binaries.sh
+  on:
+    branch: master
